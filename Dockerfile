@@ -38,7 +38,7 @@ RUN ./afterInstall.sh
 
 EXPOSE 80
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
-CMD php artisan cache:clear && php artisan migrate --force && /usr/bin/supervisord
+CMD /usr/bin/supervisord
 
 
 
